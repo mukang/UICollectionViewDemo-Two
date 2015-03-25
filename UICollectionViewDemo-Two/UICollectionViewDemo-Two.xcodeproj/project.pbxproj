@@ -16,7 +16,8 @@
 		7A670C891ABD93F00007CA76 /* UICollectionViewDemo_TwoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C881ABD93F00007CA76 /* UICollectionViewDemo_TwoTests.m */; };
 		7A670C951ABDBFEF0007CA76 /* MKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C931ABDBFEF0007CA76 /* MKCollectionViewCell.m */; };
 		7A670C961ABDBFEF0007CA76 /* MKCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A670C941ABDBFEF0007CA76 /* MKCollectionViewCell.xib */; };
-		7A670C991ABDC4F00007CA76 /* MKCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C981ABDC4F00007CA76 /* MKCollectionViewLayout.m */; };
+		7A670C991ABDC4F00007CA76 /* MKCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A670C981ABDC4F00007CA76 /* MKCircleLayout.m */; };
+		7A70226B1AC24F900076B1F1 /* MKStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70226A1AC24F900076B1F1 /* MKStackLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,10 @@
 		7A670C921ABDBFEF0007CA76 /* MKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCollectionViewCell.h; sourceTree = "<group>"; };
 		7A670C931ABDBFEF0007CA76 /* MKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCollectionViewCell.m; sourceTree = "<group>"; };
 		7A670C941ABDBFEF0007CA76 /* MKCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MKCollectionViewCell.xib; sourceTree = "<group>"; };
-		7A670C971ABDC4F00007CA76 /* MKCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCollectionViewLayout.h; sourceTree = "<group>"; };
-		7A670C981ABDC4F00007CA76 /* MKCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCollectionViewLayout.m; sourceTree = "<group>"; };
+		7A670C971ABDC4F00007CA76 /* MKCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCircleLayout.h; sourceTree = "<group>"; };
+		7A670C981ABDC4F00007CA76 /* MKCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCircleLayout.m; sourceTree = "<group>"; };
+		7A7022691AC24F900076B1F1 /* MKStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStackLayout.h; sourceTree = "<group>"; };
+		7A70226A1AC24F900076B1F1 /* MKStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStackLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 				7A670C921ABDBFEF0007CA76 /* MKCollectionViewCell.h */,
 				7A670C931ABDBFEF0007CA76 /* MKCollectionViewCell.m */,
 				7A670C941ABDBFEF0007CA76 /* MKCollectionViewCell.xib */,
-				7A670C971ABDC4F00007CA76 /* MKCollectionViewLayout.h */,
-				7A670C981ABDC4F00007CA76 /* MKCollectionViewLayout.m */,
+				7A670C971ABDC4F00007CA76 /* MKCircleLayout.h */,
+				7A670C981ABDC4F00007CA76 /* MKCircleLayout.m */,
+				7A7022691AC24F900076B1F1 /* MKStackLayout.h */,
+				7A70226A1AC24F900076B1F1 /* MKStackLayout.m */,
 				7A670C731ABD93F00007CA76 /* ViewController.h */,
 				7A670C741ABD93F00007CA76 /* ViewController.m */,
 				7A670C761ABD93F00007CA76 /* Main.storyboard */,
@@ -235,7 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A670C951ABDBFEF0007CA76 /* MKCollectionViewCell.m in Sources */,
-				7A670C991ABDC4F00007CA76 /* MKCollectionViewLayout.m in Sources */,
+				7A670C991ABDC4F00007CA76 /* MKCircleLayout.m in Sources */,
+				7A70226B1AC24F900076B1F1 /* MKStackLayout.m in Sources */,
 				7A670C751ABD93F00007CA76 /* ViewController.m in Sources */,
 				7A670C721ABD93F00007CA76 /* AppDelegate.m in Sources */,
 				7A670C6F1ABD93F00007CA76 /* main.m in Sources */,
@@ -433,6 +439,7 @@
 				7A670C8E1ABD93F00007CA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A670C8F1ABD93F00007CA76 /* Build configuration list for PBXNativeTarget "UICollectionViewDemo-TwoTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +448,7 @@
 				7A670C911ABD93F00007CA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

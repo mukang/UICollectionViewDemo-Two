@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "MKCollectionViewCell.h"
-#import "MKCollectionViewLayout.h"
+#import "MKCircleLayout.h"
+#import "MKStackLayout.h"
 
-@interface ViewController () <UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *images;
+
+@property (nonatomic, weak) UICollectionView *collectionView;
 
 @end
 
@@ -40,15 +43,31 @@ static NSString * const ID = @"image";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MKCollectionViewLayout *layout = [[MKCollectionViewLayout alloc] init];
+    MKCircleLayout *layout = [[MKCircleLayout alloc] init];
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 300) collectionViewLayout:layout];
     
     collectionView.dataSource = self;
     
+    collectionView.delegate = self;
+    
     [collectionView registerNib:[UINib nibWithNibName:@"MKCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ID];
     
     [self.view addSubview:collectionView];
+    
+    self.collectionView = collectionView;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    if ([self.collectionView.collectionViewLayout isKindOfClass:[MKCircleLayout class]]) {
+        
+        [self.collectionView setCollectionViewLayout:[[MKStackLayout alloc] init] animated:YES];
+        
+    } else {
+        
+        [self.collectionView setCollectionViewLayout:[[MKCircleLayout alloc] init] animated:YES];
+    }
 }
 
 #pragma mark - <UICollectionViewDataSource>
@@ -67,6 +86,19 @@ static NSString * const ID = @"image";
     return cell;
 }
 
+#pragma mark - <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // 删除图片名
+    [self.images removeObjectAtIndex:indexPath.item];
+    
+    // 直接刷新数据源没有动画效果
+//    [self.collectionView reloadData];
+    
+    // 直接将cell删除
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+}
 
 
 @end
